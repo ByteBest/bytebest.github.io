@@ -7,19 +7,20 @@
 
 body {
   background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 /*
-  Navigation
+  --------- Navigation
  */
 .navi-container {}
 .navi-container .right-area {}
 
 /*
-  Header
+  --------- Header
  */
 .header {
   background: #1B1C1D;
@@ -30,7 +31,7 @@ body {
   text-align: center;
   top: 0;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
 }
 
 .header h1 {
@@ -50,3 +51,118 @@ body {
 
 .header .big_button {}
 
+/*
+  --------- About us / what we do section
+ */
+.about_section {
+  min-height: 420px;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.about_section .holder {
+  width: 100%;
+  display: table;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+.about_section .holder img {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  max-height: 240px;
+  max-width: 240px;
+  display: table-cell;
+}
+.about_section .holder p {
+  display: table-cell;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 40px;
+  vertical-align: top;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*
+  --------- Generic classes
+ */
+.right { float:right; }
+.inline { display: inline; }
+.responsive {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  display: block;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+.anim_fade_in { animation: anim_fade_in 1s; }
+.anim_shine { animation: anim_shine 1s; }
+
+/*
+  --------- Responsive tweaks
+ */
+/* Fablet */
+@media only screen and (max-width: 700px) {
+  .heading { font-size: 1.7em }
+  .header { min-height: 350px }
+  .header h1 {
+    margin-top: 110px;
+    font-size: 2.6em;
+  }
+
+  .header h2 { font-size: 1.5em }
+
+  .about_container .logo {
+    max-height: 180px;
+    max-width: 180px;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 560px) {
+  .about_section .holder { display: block; }
+  .about_section .holder img {
+    width: 50%;
+    margin: 0px auto;
+    display: block;
+    height: auto;
+  }
+
+  .about_section .holder p {
+    display: block;
+    padding-left: 5px;
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 380px) {
+
+}
+
+/*
+  --------- Keyframe animations
+ */
+@keyframes anim_fade_in {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+@keyframes anim_shine {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
