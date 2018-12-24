@@ -1,90 +1,89 @@
-/*
-  Inspired by https://semantic-ui.com/examples/homepage.html
-  Coded scratch by github.com/griimnak
- */
-
-* { box-sizing: border-box }
+* { box-sizing: border-box; }
 
 body {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  background-color: rgba(28, 28, 28, 1);
+  color: #fcfcfc;
+  font: normal 14px 'Raleway', sans-serif;
+  line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
 /*
-  --------- Navigation
+  ----- Header
  */
-.navi-container {}
-.navi-container .right-area {}
-
-/*
-  --------- Header
- */
-.header {
-  background: #1B1C1D;
-  color: #fff;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 8px;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  min-height: 700px;
-}
-
-.header h1 {
-  margin-top: 260px;
-  font-size: 4em;
-  font-weight: normal;
-}
-
-.header h2 {
-  font-size: 1.7em;
-  background: #1B1C1D;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: -19px;
-  display: block;
-  font-weight: normal;
-}
-
-.header .big_button {}
-
-/*
-  --------- About us / what we do section
- */
-.about_section {
-  min-height: 420px;
-  border-bottom: 1px solid rgb(222, 222, 222);
-}
-
-.about_section .holder {
-  width: 100%;
+.header { min-height: 355px }
+.header .inner {
+  max-width: 1028px;
   display: table;
-  margin: 10px 0px;
+  margin: 130px auto 0;
   padding: 10px;
 }
 
-.about_section .holder img {
+.header .inner img {
   border: 1px solid transparent;
   border-radius: 6px;
   max-height: 240px;
   max-width: 240px;
   display: table-cell;
 }
-.about_section .holder p {
+.header .inner h2 {
+  font-size: 38px;
+  font-weight: 300;
   display: table-cell;
+  line-height: 1.10;
   height: 100%;
-  padding-top: 20px;
-  padding-left: 40px;
+  padding-top: 70px;
   vertical-align: top;
 }
+.header .inner h2 span { font-size: 26px; opacity: 0.8}
+.header .inner h2 span::before { content: "\A"; white-space: pre }
+
+/*
+  ----- Explore
+ */
+.explore {
+  background-color: #222;
+  border-bottom: 1px solid #232323
+  margin: 0 auto;
+}
+.explore .heading {
+  padding-top: 56px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.explore .hint {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 605px;
+  opacity: 0.8;
+}
+
+.explore .git_container {
+  max-width: 1012px;
+  margin: 50px auto 0;
+  min-height: 368px;
+}
+
+.explore .git_container .item {
+  display: inline-block;
+  margin:10px;
+  border-radius: 3px;
+  background-color: rgba(28, 28, 28, 1);
+  padding: 15px;
+  width: 305px;
+  min-height: 33px;
+}
+
 
 
 /* -------------------------------------------------------------------------- */
 /*
-  --------- Generic classes
+  ----- Generic classes
  */
 .right { float:right; }
 .inline { display: inline; }
@@ -94,47 +93,31 @@ body {
   display: block;
 }
 
-.heading {
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-}
 .anim_fade_in { animation: anim_fade_in 1s; }
 .anim_shine { animation: anim_shine 1s; }
 
 /*
-  --------- Responsive tweaks
+  ----- Responsive tweaks
  */
 /* Fablet */
 @media only screen and (max-width: 700px) {
-  .heading { font-size: 1.7em }
-  .header { min-height: 350px }
-  .header h1 {
-    margin-top: 110px;
-    font-size: 2.6em;
-  }
 
-  .header h2 { font-size: 1.5em }
-
-  .about_container .logo {
-    max-height: 180px;
-    max-width: 180px;
-  }
 }
 
 /* Tablet */
 @media only screen and (max-width: 560px) {
-  .about_section .holder { display: block; }
-  .about_section .holder img {
+  .header .inner { display: block; margin: 80px auto 0; }
+  .header .inner img {
     width: 50%;
     margin: 0px auto;
     display: block;
     height: auto;
   }
 
-  .about_section .holder p {
+  .header .inner h2 {
     display: block;
-    padding-left: 5px;
+    padding-top: 10px;
+    text-align: center;
   }
 }
 
