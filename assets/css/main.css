@@ -187,10 +187,15 @@ body {
     width: 100%;
     margin: 0 0 20px;
   }
+
+  .header .inner h2 { font-size: 34px; }
+  .header .inner span { font-size: 22px; }
+  .explore .hint { font-size: 14px; }
+  .explore .heading { font-size: 44px; }
 }
 
 @media only screen and (max-width: 560px) {
-  .header .inner { display: block; margin: 80px auto 0; }
+  .header .inner { display: block; margin: 80px auto 25px; }
   .header .inner img {
     width: 50%;
     margin: 0px auto;
@@ -207,7 +212,8 @@ body {
 
 /* Phone */
 @media only screen and (max-width: 380px) {
-
+  .header .inner h2 { font-size: 32px; }
+  .header .inner span { font-size: 23px !important; }
 }
 
 /*
