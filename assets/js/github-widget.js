@@ -50,30 +50,28 @@ function list() {
                 jsonRsp[k]['name'],
                 jsonRsp[k]['description'],
                 jsonRsp[k]['stargazers_count'],
-                jsonRsp[k]['stargazers_url'],
+                jsonRsp[k]['forks_count']
             );
         }
     });
 }
 
-function renderElements(name, description, stargazers_count, stargazers_url) {
+function renderElements(name, description, stargazers_count, forks_count) {
     var container = document.getElementById("git_repos");
 
     var html = `
+    <a target="_blank" href="https://github.com/ByteBest/${name}">
       <div class="item">
         <div class="desc">
           <h3>${name}</h3>
           <p>${description}</p>
         </div>
         <div class="git_btns">
-          <a href="#" class="git_cloud"><img src="assets/media/git_cloud.svg"> 0</a>
-          <a href="${stargazers_url}" class="git_star"><img src="assets/media/git_star.svg"> ${stargazers_count}</a>
-          <a href="#" class="git_contrib">
-            <img src="https://github.com/griimnak.png">
-            <img src="https://github.com/TesoMayn.png">
-          </a>
+          <a href="#" class="git_fork"><img src="assets/media/git_fork.svg"> ${forks_count}</a>
+          <a href="#" class="git_star"><img src="assets/media/git_star.svg"> ${stargazers_count}</a>
         </div>
       </div>
+    </a>
     `;
 
     container.innerHTML += html;

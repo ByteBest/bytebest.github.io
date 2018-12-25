@@ -72,6 +72,7 @@ body {
   min-height: 368px;
 }
 
+.explore .git_container a { text-decoration: none; color: #fcfcfc; }
 .explore .git_container .item {
   border: 1px solid #131313;
   display: inline-block;
@@ -103,7 +104,7 @@ body {
   border-top: 1px solid #131313;
 }
 
-.explore .git_container .item .git_btns .git_cloud { padding-left: 13px; }
+.explore .git_container .item .git_btns .git_fork { padding-left: 13px; }
 .explore .git_container .item .git_btns .git_star { padding-left: 10px; }
 .explore .git_container .item .git_btns .git_contrib {
   float: right;
@@ -115,7 +116,7 @@ body {
   height: 24px;
 }
 
-.git_cloud, .git_star { text-decoration: none; color:#fcfcfc; }
+.git_fork, .git_star { text-decoration: none; color:#fcfcfc; }
 .git_more {
   margin: 0 auto;
   text-align: center;
