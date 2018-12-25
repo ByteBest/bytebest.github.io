@@ -44,7 +44,7 @@ body {
  */
 .explore {
   background-color: #222;
-  border-bottom: 1px solid #232323
+  border-top: 1px solid #131313;
   margin: 0 auto;
 }
 .explore .heading {
@@ -70,16 +70,69 @@ body {
 }
 
 .explore .git_container .item {
+  border: 1px solid #131313;
   display: inline-block;
   margin:10px;
   border-radius: 3px;
   background-color: rgba(28, 28, 28, 1);
-  padding: 15px;
-  width: 305px;
+  box-shadow: 0 1px 1px rgba(27,31,35,0.1);
+  width: 307px;
   min-height: 33px;
+  vertical-align: top;
+}
+.explore .git_container .item .desc {
+  margin-top: -7px;
+  margin-bottom: -7px;
+  padding: 15px;
 }
 
+.explore .git_container .item .desc p {opacity: 0.8;}
+.explore .git_container .item .desc p, h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 280px;
+  display: block;
+  overflow: hidden
+}
 
+.explore .git_container .item .git_btns {
+  padding: 10px 0;
+  border-top: 1px solid #131313;
+}
+
+.explore .git_container .item .git_btns .git_cloud { padding-left: 13px; }
+.explore .git_container .item .git_btns .git_star { padding-left: 10px; }
+.explore .git_container .item .git_btns .git_contrib {
+  float: right;
+  padding-right: 10px;
+}
+
+.explore .git_container .item .git_btns .git_contrib img {
+  width: 24px;
+  height: 24px;
+}
+
+.git_cloud, .git_star { text-decoration: none; color:#fcfcfc; }
+.git_more {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 181px;
+  padding: 40px 0 60px;
+}
+
+.git_more .more_btn {
+  background-color: rgba(28, 28, 28, 1);
+  border: 1px solid #131313;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px rgba(27,31,35,0.1);
+  color: #fcfcfc;
+  display:block;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.git_more .more_btn:hover { transform: scale(1.1); }
+.git_more .more_btn img { padding-right:5px; }
 
 /* -------------------------------------------------------------------------- */
 /*
@@ -99,12 +152,20 @@ body {
 /*
   ----- Responsive tweaks
  */
-/* Fablet */
-@media only screen and (max-width: 700px) {
-
+@media only screen and (max-width: 1005px) {
+  .explore .git_container .item {
+    width: 47%;
+    margin: 0 10px 20px;
+  }
 }
 
-/* Tablet */
+@media only screen and (max-width: 743px) {
+  .explore .git_container .item {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .header .inner { display: block; margin: 80px auto 0; }
   .header .inner img {
