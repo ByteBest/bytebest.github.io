@@ -1,3 +1,6 @@
+/*
+  github.com/griimnak
+ */
 * { box-sizing: border-box; }
 
 body {
@@ -133,6 +136,26 @@ body {
 
 .git_more .more_btn:hover { transform: scale(1.1); }
 .git_more .more_btn img { padding-right:5px; }
+
+/*
+  ----- Footer
+ */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #888;
+  height: 80px;
+}
+
+.footer .main_text { text-align: right; padding: 15px 10px 0; }
+.footer .small {
+  font-size: 11px;
+  text-align: right;
+  margin-top: -6px;
+  padding: 0 10px 10px;
+  opacity: 0.8;
+}
+
+.footer .small a { text-decoration: none; color: #fcfcfc; }
 
 /* -------------------------------------------------------------------------- */
 /*
