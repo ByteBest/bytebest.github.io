@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>ByteBest</title>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin">
+  <meta name="author" content="ByteBest">
+  <meta name="description" content="A serene group of technology enthusiasts and developers">
+  <meta name="keywords" content="HTML,CSS,PHP,JavaScript,Python">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Stylsheets & fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
-<body>
+<body class="anim_fade_in">
+  <!-- Header -->
   <div class="header">
-    <h1>ByteBest</h1>
-    <h2>A serene group of technology enthusiasts and developers</h2>
+    <div class="inner">
+      <img class="anim_shine" src="assets/media/bytebest_transparent.png"/>
+      <h2>ByteBest
+        <span>A serene group of developers and technology enthusiasts</span>
+      </h2>
+    </div>
   </div>
+  <!-- Explore -->
+  <div class="explore">
+    <h2 class="heading">Explore</h2>
+    <p class="hint">Check out our scripts and projects which are all forkable on GitHub.</p>
+    <p class="hint">They're all open source and free to use on any project.</p>
+    <!-- Explore::Git repos -->
+    <div id="git_repos" class="git_container">
+
+
+      <div class="item">
+        <div class="desc">
+          <h3>Work In Progress</h3>
+          <p>This is a github repo description at max length. Wooooooooooooooooooo</p>
+        </div>
+        <div class="git_btns">
+          <a href="#" class="git_cloud"><img src="assets/media/git_cloud.svg"> 100</a>
+          <a href="#" class="git_star"><img src="assets/media/git_star.svg"> 123</a>
+          <a href="#" class="git_contrib">
+            <img src="https://github.com/griimnak.png">
+            <img src="https://github.com/TesoMayn.png">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Explore::View more btn -->
+    <div class="git_more">
+      <a href="https://github.com/ByteBest" class="more_btn">
+        <img src="assets/media/explore.svg"> Explore more repos
+      </a>
+    </div>
+  </div>
+
+  <div style="min-height: 600px;"><!-- Just for dev--></div>
+  <!-- Footer -->
+  <div class="footer">
+    <div class="right">
+      <p class="main_text">© 2018 - ByteBest https://bytebest.cf</p>
+      <p class="small">Crafted with &hearts; by <a href="https://github.com/griimnak">griimnak</a></p>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/js/github-widget.js"></script>
 </body>
 </html>
